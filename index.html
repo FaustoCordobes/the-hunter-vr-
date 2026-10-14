@@ -236,7 +236,13 @@
     transition:border-color .15s ease, background .15s ease;
   }
   .icon-btn:hover{ border-color:var(--accent); background:rgba(var(--accent-rgb),0.12); }
-  .footer-fine{ font-family:'Space Mono', monospace; font-size:11px; color:var(--fg-dim); margin-top:32px; }
+  .footer-fine{
+    font-family:'Space Mono', monospace; font-size:11px; color:var(--fg-dim); margin-top:32px;
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;
+  }
+  .footer-credit{ color:var(--fg-dim); text-align:right; transition:color .15s ease; }
+  .footer-credit:hover{ color:var(--scan); }
+  @media (max-width:620px){ .footer-credit{ text-align:left; } }
 
   /* ---------- FLOATING WHATSAPP ---------- */
   .float-wa{
@@ -546,7 +552,8 @@
     </div>
   </div>
   <div class="wrap footer-fine">
-    THE HUNTER VR — San Martín de los Andes y Bariloche, Argentina
+    <span>THE HUNTER VR — San Martín de los Andes y Bariloche, Argentina</span>
+    <a class="footer-credit" href="https://f-cwebstudio.vercel.app/" target="_blank" rel="noopener">¿Te gustó la página y querés una para tu local o emprendimiento? Hacé click acá ↗</a>
   </div>
 </footer>
 
